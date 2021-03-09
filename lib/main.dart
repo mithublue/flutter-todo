@@ -96,7 +96,10 @@ class _ListViewWidgetState extends State<ListViewWidget> {
               actions: [
                 FlatButton(onPressed: (){
                   setState(() {
-                    this.listNum = int.parse(_number.text);
+                    var n = int.parse(_number.text);
+                    if( n >= 0 ) {
+                      this.listNum = n;
+                    }
                   });
                 }, child: Text('Yes')),
                 FlatButton(onPressed: (){}, child: Text('No'))
@@ -106,7 +109,7 @@ class _ListViewWidgetState extends State<ListViewWidget> {
         );
       },
         backgroundColor: Colors.amber,
-        child: Icon(Icons.favorite),
+        child: Text("Todo"),
       ),
     );
   }
