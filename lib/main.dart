@@ -78,13 +78,6 @@ class _ListViewWidgetState extends State<ListViewWidget> {
           ),
         ]
       ),
-      bottomNavigationBar: BottomAppBar(
-        child: Container(
-          color: Colors.amber,
-          height: 50,
-        ),
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton(onPressed: (){
         showDialog(
           context: context,
@@ -117,49 +110,6 @@ class _ListViewWidgetState extends State<ListViewWidget> {
       },
         backgroundColor: Colors.amber,
         child: Text("Todo"),
-      ),
-      drawer: Drawer(
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: <Widget>[
-            UserAccountsDrawerHeader(
-                decoration: BoxDecoration(color: Colors.white),
-                currentAccountPicture: new CircleAvatar(
-                  radius: 50.0,
-                  backgroundColor: const Color(0xFF778899),
-                  backgroundImage:
-                  NetworkImage("http://tineye.com/images/widgets/mona.jpg"),
-                ),
-                accountName: null, accountEmail: null),
-            DrawerHeader(
-                child: Text('Drawer Header'),
-              decoration: BoxDecoration(
-                color: Colors.lightBlue
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.fromLTRB(10,0,10,0),
-              child: ListTile(
-                title: Text('List Item 1'),
-                onTap: (){},
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.fromLTRB(10,0,10,0),
-              child: ListTile(
-                title: Text('List Item 2'),
-                onTap: (){},
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.fromLTRB(10,0,10,0),
-              child: ListTile(
-                title: Text('List Item 3'),
-                onTap: (){},
-              ),
-            ),
-          ],
-        ),
       ),
     );
   }
